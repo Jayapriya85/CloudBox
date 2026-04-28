@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: . # Root folder-ilirunthu build seyyuthu
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+    env_file:
+      - backend/.env
