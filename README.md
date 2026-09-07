@@ -40,18 +40,18 @@ Follow these steps to set up and run CloudBox on your local machine using Docker
 - [Git](https://git-scm.com/) installed.
 - A [Supabase](https://supabase.com/) account with a created project and storage bucket.
 
-### 1. Clone the Repository
+ 1. Clone the Repository
     git clone https://github.com/YourUsername/CloudBox.git
     cd CloudBox
 
-### 2. Configure Environment Variables
+ 2. Configure Environment Variables
 Create a `.env` file in the root directory and add your Supabase credentials:
     PORT=5000
     SUPABASE_URL=your_supabase_project_url
     SUPABASE_ANON_KEY=your_supabase_anon_key
     SUPABASE_BUCKET_NAME=your_bucket_name
 
-### 3. Build and Run via Docker
+ 3. Build and Run via Docker
 To build the Docker image and start the container, run:
     docker build -t cloudbox-app .
     docker run -p 5000:5000 --env-file .env cloudbox-app
